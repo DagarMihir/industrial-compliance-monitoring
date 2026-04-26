@@ -9,41 +9,45 @@
 \@writefile{toc}{\contentsline {section}{\numberline {II}Study Area and Data}{1}{section.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Study Zones}{1}{subsection.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Satellite Data}{1}{subsection.2.2}\protected@file@percent }
+\citation{kgis2024}
 \citation{rouse1974}
 \citation{zha2003}
 \citation{zha2003}
 \citation{breiman2001}
 \citation{pedregosa2011}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces End-to-end system architecture. The pipeline progresses from cloud-native data acquisition through preprocessing, spectral analysis, ML classification, change detection, and finally compliance report generation. Each stage produces intermediate outputs (bottom labels) consumed by subsequent stages.}}{2}{figure.caption.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Detailed system architecture. Each stage (bold header) contains specific sub-processes. The dashed feedback path shows how spectral indices generate threshold-based pseudo-labels consumed by the ML classification stage, while the classifier itself trains on raw spectral bands only (non-circular design).}}{2}{figure.caption.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:arch}{{1}{2}{End-to-end system architecture. The pipeline progresses from cloud-native data acquisition through preprocessing, spectral analysis, ML classification, change detection, and finally compliance report generation. Each stage produces intermediate outputs (bottom labels) consumed by subsequent stages}{figure.caption.1}{}}
+\newlabel{fig:arch}{{1}{2}{Detailed system architecture. Each stage (bold header) contains specific sub-processes. The dashed feedback path shows how spectral indices generate threshold-based pseudo-labels consumed by the ML classification stage, while the classifier itself trains on raw spectral bands only (non-circular design)}{figure.caption.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Sentinel-2 Acquisition Parameters}}{2}{table.caption.2}\protected@file@percent }
+\newlabel{tab:acq}{{I}{2}{Sentinel-2 Acquisition Parameters}{table.caption.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Spectral Bands Used in Analysis}}{2}{table.caption.3}\protected@file@percent }
+\newlabel{tab:bands}{{II}{2}{Spectral Bands Used in Analysis}{table.caption.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Methodology}{2}{section.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Preprocessing}{2}{subsection.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Spectral Index Computation}{2}{subsection.3.2}\protected@file@percent }
+\newlabel{eq:ndvi}{{1}{2}{Spectral Index Computation}{equation.3.1}{}}
+\newlabel{eq:ndbi}{{2}{2}{Spectral Index Computation}{equation.3.2}{}}
+\newlabel{eq:nbi}{{3}{2}{Spectral Index Computation}{equation.3.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Change Detection}{2}{subsection.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-D}}ML Classification}{2}{subsection.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-D}1}Supervised: Random Forest}{2}{subsubsection.3.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Land Cover Class Definitions}}{2}{table.caption.4}\protected@file@percent }
+\newlabel{tab:classes}{{III}{2}{Land Cover Class Definitions}{table.caption.4}{}}
 \citation{tucker1979}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Temporal change analysis for Peenya. Top row: true-color RGB composites for 2020 (left) and 2024 (right). Bottom row: NDVI heatmaps showing the decline in vegetation density from a mean of 0.277 to 0.169, corresponding to a 22.6\% reduction in green cover.}}{3}{figure.caption.2}\protected@file@percent }
-\newlabel{fig:beforeafter}{{2}{3}{Temporal change analysis for Peenya. Top row: true-color RGB composites for 2020 (left) and 2024 (right). Bottom row: NDVI heatmaps showing the decline in vegetation density from a mean of 0.277 to 0.169, corresponding to a 22.6\% reduction in green cover}{figure.caption.2}{}}
+\citation{rouse1974}
+\citation{rouse1974}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Temporal change analysis for Peenya Industrial Area. \textit  {Top:} true-color RGB composites (2020 vs.\ 2024). \textit  {Bottom:} NDVI heatmaps showing vegetation density decline from a mean of 0.277 to 0.169, corresponding to a 22.6\% reduction in green cover.}}{3}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:beforeafter}{{2}{3}{Temporal change analysis for Peenya Industrial Area. \textit {Top:} true-color RGB composites (2020 vs.\ 2024). \textit {Bottom:} NDVI heatmaps showing vegetation density decline from a mean of 0.277 to 0.169, corresponding to a 22.6\% reduction in green cover}{figure.caption.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-D}2}Unsupervised: K-Means}{3}{subsubsection.3.4.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-E}}Violation Extraction}{3}{subsection.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Results}{3}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Results and Discussion}{3}{section.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Change Detection}{3}{subsection.4.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces Change Detection Results (2020 to 2024)}}{3}{table.caption.3}\protected@file@percent }
-\newlabel{tab:change}{{I}{3}{Change Detection Results (2020 to 2024)}{table.caption.3}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Random Forest Classification Metrics}}{3}{table.caption.4}\protected@file@percent }
-\newlabel{tab:ml}{{II}{3}{Random Forest Classification Metrics}{table.caption.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Change Detection Results (2020--2024)}}{3}{table.caption.6}\protected@file@percent }
+\newlabel{tab:change}{{IV}{3}{Change Detection Results (2020--2024)}{table.caption.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Random Forest Classification Results (Test Set)}}{3}{table.caption.7}\protected@file@percent }
+\newlabel{tab:ml}{{V}{3}{Random Forest Classification Results (Test Set)}{table.caption.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}ML Classification Performance}{3}{subsection.4.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Violation Detection and Spatial Analysis}{3}{subsection.4.3}\protected@file@percent }
-\citation{rouse1974,zha2003}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Confusion matrix for the Peenya Random Forest classifier (173,715 test samples). The strong diagonal confirms high per-class accuracy. Minor misclassification occurs between spectrally similar minority classes (Bare Soil, Water, Other).}}{4}{figure.caption.5}\protected@file@percent }
-\newlabel{fig:cm}{{3}{4}{Confusion matrix for the Peenya Random Forest classifier (173,715 test samples). The strong diagonal confirms high per-class accuracy. Minor misclassification occurs between spectrally similar minority classes (Bare Soil, Water, Other)}{figure.caption.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Random Forest feature importance for Peenya. The dominance of B04 (Red) and B08 (NIR) is consistent with established vegetation spectral theory, as these bands capture the chlorophyll absorption and mesophyll scattering characteristics used in NDVI computation.}}{4}{figure.caption.6}\protected@file@percent }
-\newlabel{fig:fi}{{4}{4}{Random Forest feature importance for Peenya. The dominance of B04 (Red) and B08 (NIR) is consistent with established vegetation spectral theory, as these bands capture the chlorophyll absorption and mesophyll scattering characteristics used in NDVI computation}{figure.caption.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Discussion}{4}{section.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Annotated satellite imagery of Whitefield (2024) showing detected violations with area labels. Red indicates vegetation loss, orange marks new construction, and pink denotes combined violations where both conditions are met simultaneously.}}{4}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:violations}{{5}{4}{Annotated satellite imagery of Whitefield (2024) showing detected violations with area labels. Red indicates vegetation loss, orange marks new construction, and pink denotes combined violations where both conditions are met simultaneously}{figure.caption.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces ML-based land cover classification for Peenya, 2020 (left) versus 2024 (right). The transition from vegetation (green) to built-up area (brown) is prominent across the northern and eastern sectors of the industrial zone.}}{4}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:landcover}{{6}{4}{ML-based land cover classification for Peenya, 2020 (left) versus 2024 (right). The transition from vegetation (green) to built-up area (brown) is prominent across the northern and eastern sectors of the industrial zone}{figure.caption.8}{}}
 \bibcite{cpcb2021}{1}
 \bibcite{pc2023}{2}
 \bibcite{zha2003}{3}
@@ -53,6 +57,17 @@
 \bibcite{rouse1974}{7}
 \bibcite{esa2024}{8}
 \bibcite{pedregosa2011}{9}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{5}{section.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{5}{section*.10}\protected@file@percent }
+\bibcite{kgis2024}{10}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Normalized confusion matrix for the Peenya RF classifier (173,715~test samples). Strong diagonal confirms high per-class accuracy; minor confusion occurs between spectrally similar minority classes.}}{4}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:cm}{{3}{4}{Normalized confusion matrix for the Peenya RF classifier (173,715~test samples). Strong diagonal confirms high per-class accuracy; minor confusion occurs between spectrally similar minority classes}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Discussion}{4}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{4}{section.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Random Forest feature importance (Peenya). B04 and B08 dominate, consistent with vegetation spectral theory\textemdash these bands form the basis of the NDVI computation~\cite  {rouse1974}.}}{4}{figure.caption.9}\protected@file@percent }
+\newlabel{fig:fi}{{4}{4}{Random Forest feature importance (Peenya). B04 and B08 dominate, consistent with vegetation spectral theory\textemdash these bands form the basis of the NDVI computation~\cite {rouse1974}}{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {section}{References}{4}{section*.13}\protected@file@percent }
+\bibcite{belgiu2016}{11}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces ML-based land cover classification for Peenya: 2020 (left) vs.\ 2024 (right). The transition from vegetation to built-up is prominent in the northern and eastern sectors.}}{5}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:landcover}{{6}{5}{ML-based land cover classification for Peenya: 2020 (left) vs.\ 2024 (right). The transition from vegetation to built-up is prominent in the northern and eastern sectors}{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Annotated satellite imagery of Whitefield (2024) with detected violations. Red: vegetation loss; orange: new construction; pink: combined. Marker size is proportional to violation area.}}{5}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:violations}{{5}{5}{Annotated satellite imagery of Whitefield (2024) with detected violations. Red: vegetation loss; orange: new construction; pink: combined. Marker size is proportional to violation area}{figure.caption.10}{}}
 \gdef \@abspage@last{5}

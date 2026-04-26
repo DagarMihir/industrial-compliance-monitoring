@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.30)  25 APR 2026 02:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.30)  26 APR 2026 23:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -468,49 +468,384 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/preprint\balance.sty
+Package: balance 1999/02/23 4.3 (PWD)
+\oldvsize=\dimen259
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.
+sty
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.st
+y
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-common.tex
+\pgfutil@everybye=\toks29
+\pgfutil@tempdima=\dimen260
+\pgfutil@tempdimb=\dimen261
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil
+-latex.def
+\pgfutil@abb=\box59
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.
+code.tex
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.
+sty
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.
+sty
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
+
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+libraryfiltered.code.tex
+\pgfkeys@tmptoks=\toks32
+))
+\pgf@x=\dimen262
+\pgf@y=\dimen263
+\pgf@xa=\dimen264
+\pgf@ya=\dimen265
+\pgf@xb=\dimen266
+\pgf@yb=\dimen267
+\pgf@xc=\dimen268
+\pgf@yc=\dimen269
+\pgf@xd=\dimen270
+\pgf@yd=\dimen271
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count302
+\c@pgf@countb=\count303
+\c@pgf@countc=\count304
+\c@pgf@countd=\count305
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
+\pgf@sys@id@count=\count306
+
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.c
+fg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-pdftex.def
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+s-common-pdf.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+ssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count307
+\pgfsyssoftpath@bigbuffer@items=\count308
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsy
+sprotocol.code.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+e.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.
+code.tex)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparse
+r.code.tex
+\pgfmath@dimen=\dimen272
+\pgfmath@count=\count309
+\pgfmath@box=\box60
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.code.tex)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunct
+ions.integerarithmetics.code.tex)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.
+code.tex)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat
+.code.tex
+\c@pgfmathroundto@lastzeros=\count310
+))
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.
+tex)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epoints.code.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen273
+\pgf@picmaxx=\dimen274
+\pgf@picminy=\dimen275
+\pgf@picmaxy=\dimen276
+\pgf@pathminx=\dimen277
+\pgf@pathmaxx=\dimen278
+\pgf@pathminy=\dimen279
+\pgf@pathmaxy=\dimen280
+\pgf@xx=\dimen281
+\pgf@xy=\dimen282
+\pgf@yx=\dimen283
+\pgf@yy=\dimen284
+\pgf@zx=\dimen285
+\pgf@zy=\dimen286
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen287
+\pgf@path@lasty=\dimen288
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathusage.code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen289
+\pgf@shorten@start@additional=\dimen290
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+escopes.code.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box61
+\pgf@hbox=\box62
+\pgf@layerbox@main=\box63
+\pgf@picture@serial@count=\count311
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+egraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen291
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransformations.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen292
+\pgf@pt@y=\dimen293
+\pgf@pt@temp=\dimen294
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+equick.code.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eobjects.code.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+earrows.code.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen295
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eshade.code.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen296
+\pgf@sys@shading@range@num=\count312
+\pgf@shadingcount=\count313
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eimage.code.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+eexternal.code.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box64
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+elayers.code.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+etransparency.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+epatterns.code.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcor
+erdf.code.tex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+shapes.code.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box65
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+plot.code.tex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen297
+\pgf@nodesepend=\dimen298
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfco
+mp-version-1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgffor.st
+y
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfkeys.s
+ty
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys
+.code.tex))
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code
+.tex))
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgffor.
+code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen299
+\pgffor@skip=\dimen300
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
+))
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z\tikz.code.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count314
+\pgfplotmarksize=\dimen301
+)
+\tikz@lastx=\dimen302
+\tikz@lasty=\dimen303
+\tikz@lastxsaved=\dimen304
+\tikz@lastysaved=\dimen305
+\tikz@lastmovetox=\dimen306
+\tikz@lastmovetoy=\dimen307
+\tikzleveldistance=\dimen308
+\tikzsiblingdistance=\dimen309
+\tikz@figbox=\box66
+\tikz@figbox@bg=\box67
+\tikz@tempbox=\box68
+\tikz@tempbox@bg=\box69
+\tikztreelevel=\count315
+\tikznumberofchildren=\count316
+\tikznumberofcurrentchild=\count317
+\tikz@fig@count=\count318
+
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodule
+matrix.code.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count319
+\pgfmatrixcurrentcolumn=\count320
+\pgf@matrix@numberofcolumns=\count321
+)
+\tikz@expandcount=\count322
+
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibr
+aryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen310
+\pgfarrowlength=\dimen311
+\pgfarrowwidth=\dimen312
+\pgfarrowlinewidth=\dimen313
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibraryfit.code.tex
+File: tikzlibraryfit.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tik
+z/libraries\tikzlibrarybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@layerbox@background=\box70
+\pgf@layerboxsaved@background=\box71
+)
 (C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count302
-\l__pdf_internal_box=\box59
+\l__color_backend_stack_int=\count323
+\l__pdf_internal_box=\box72
 ) (report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 37.
+LaTeX Font Info:    ... okay on input line 37.
 
 -- Lines per column: 56 (exact).
 
 (C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count303
-\scratchdimen=\dimen259
-\scratchbox=\box60
-\nofMPsegments=\count304
-\nofMParguments=\count305
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count306
-\MPscratchDim=\dimen260
-\MPnumerator=\count307
-\makeMPintoPDFobject=\count308
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count324
+\scratchdimen=\dimen314
+\scratchbox=\box73
+\nofMPsegments=\count325
+\nofMParguments=\count326
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count327
+\MPscratchDim=\dimen315
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
+\everyMPtoPDFconversion=\toks42
 )
 (C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -522,70 +857,139 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring ON on input line 25.
+Package hyperref Info: Link coloring ON on input line 37.
  (report.out) (report.out)
-\@outlinefile=\write3
-\openout3 = `report.out'.
+\@outlinefile=\write4
+\openout4 = `report.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 27.
-<../results/architecture_diagram.png, id=73, 712.5822pt x 317.988pt>
-File: ../results/architecture_diagram.png Graphic file (type png)
-<use ../results/architecture_diagram.png>
-Package pdftex.def Info: ../results/architecture_diagram.png  used on input lin
-e 46.
-(pdftex.def)             Requested size: 490.19843pt x 218.75206pt.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
-5.
+LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 3
+9.
+
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
+67.
 
 (C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 [1{C:/Users/ok790/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/ok
 790/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
 ]
-Underfull \hbox (badness 1383) in paragraph at lines 63--64
+Underfull \hbox (badness 1383) in paragraph at lines 211--212
 []\OT1/ptm/m/n/10 Industrial zone bound-aries were ob-tained from Open-
  []
 
-[2 <../results/architecture_diagram.png>]
-<../results/before_after_peenya.png, id=115, 1300.86pt x 1011.78pt>
-File: ../results/before_after_peenya.png Graphic file (type png)
-<use ../results/before_after_peenya.png>
-Package pdftex.def Info: ../results/before_after_peenya.png  used on input line
- 108.
-(pdftex.def)             Requested size: 252.0pt x 195.99174pt.
-<../results/confusion_matrix_peenya.png, id=119, 722.7pt x 578.16pt>
-File: ../results/confusion_matrix_peenya.png Graphic file (type png)
-<use ../results/confusion_matrix_peenya.png>
-Package pdftex.def Info: ../results/confusion_matrix_peenya.png  used on input 
-line 162.
-(pdftex.def)             Requested size: 252.0pt x 201.60033pt.
-<../results/feature_importance_peenya.png, id=122, 722.7pt x 433.62pt>
-File: ../results/feature_importance_peenya.png Graphic file (type png)
-<use ../results/feature_importance_peenya.png>
-Package pdftex.def Info: ../results/feature_importance_peenya.png  used on inpu
-t line 171.
-(pdftex.def)             Requested size: 252.0pt x 151.20026pt.
-<../results/annotated_violations_whitefield.png, id=124, 1011.78pt x 722.7pt>
-File: ../results/annotated_violations_whitefield.png Graphic file (type png)
-<use ../results/annotated_violations_whitefield.png>
-Package pdftex.def Info: ../results/annotated_violations_whitefield.png  used o
-n input line 182.
-(pdftex.def)             Requested size: 252.0pt x 180.00188pt.
- [3 <../results/before_after_peenya.png>]
-<../results/landcover_comparison_peenya.png, id=138, 1300.86pt x 578.16pt>
-File: ../results/landcover_comparison_peenya.png Graphic file (type png)
-<use ../results/landcover_comparison_peenya.png>
-Package pdftex.def Info: ../results/landcover_comparison_peenya.png  used on in
-put line 191.
-(pdftex.def)             Requested size: 252.0pt x 111.99529pt.
- [4 <../results/confusion_matrix_peenya.png> <../results/feature_importance_pee
-nya.png> <../results/annotated_violations_whitefield.png> <../results/landcover
-_comparison_peenya.png>]
+
+Underfull \hbox (badness 1776) in paragraph at lines 219--220
+\OT1/ptm/m/n/10 (cloud shadow), 8 (medium-probability cloud), 9 (high-
+ []
+
+[2]
+
+LaTeX Warning: File `before_after_peenya.png' not found on input line 287.
+
+
+! Package pdftex.def Error: File `before_after_peenya.png' not found: using dra
+ft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.287 ...idth=\linewidth]{before_after_peenya.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
+87.
+(C:\Users\ok790\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+
+LaTeX Warning: File `confusion_matrix_peenya.png' not found on input line 344.
+
+
+! Package pdftex.def Error: File `confusion_matrix_peenya.png' not found: using
+ draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.344 ...=\linewidth]{confusion_matrix_peenya.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `feature_importance_peenya.png' not found on input line 353
+.
+
+
+! Package pdftex.def Error: File `feature_importance_peenya.png' not found: usi
+ng draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.353 ...linewidth]{feature_importance_peenya.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `annotated_violations_whitefield.png' not found on input li
+ne 364.
+
+
+! Package pdftex.def Error: File `annotated_violations_whitefield.png' not foun
+d: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.364 ...dth]{annotated_violations_whitefield.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[3]
+
+LaTeX Warning: File `landcover_comparison_peenya.png' not found on input line 3
+73.
+
+
+! Package pdftex.def Error: File `landcover_comparison_peenya.png' not found: u
+sing draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.373 ...newidth]{landcover_comparison_peenya.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+[4]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -597,38 +1001,42 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5
-
-] (report.aux)
+[5] (report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: DC174509D2DF0CDADC591FBE63B045BB;2337.
+(rerunfilecheck)             Checksum: 98739BA9CC041C4503FFD4E0898CB0C2;2807.
  ) 
 Here is how much of TeX's memory you used:
- 12321 strings out of 474486
- 202536 string characters out of 5743754
- 1948542 words of memory out of 5000000
- 34419 multiletter control sequences out of 15000+600000
- 597006 words of font info for 106 fonts, out of 8000000 for 9000
+ 23343 strings out of 474486
+ 448912 string characters out of 5743754
+ 1965542 words of memory out of 5000000
+ 45194 multiletter control sequences out of 15000+600000
+ 598280 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,14n,79p,901b,442s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,11n,87p,1103b,967s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ok790/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmmi10.pfb><C:/Users/ok790/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
-fonts/cm/cmmi7.pfb><C:/Users/ok790/AppData/Local/Programs/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr10.pfb><C:/Users/ok790/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ok790/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ok790/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ok790/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/ok790/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/ok790/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/ok790/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on report.pdf (5 pages, 12986379 bytes).
+cmex10.pfb><C:/Users/ok790/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb><C:/Users/ok790/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb><C:/Users/ok790/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ok790/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ok790/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ok790/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ok790/AppDa
+ta/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ok
+790/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/
+Users/ok790/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb><C:/Users/ok790/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8
+a.pfb><C:/Users/ok790/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8
+a.pfb><C:/Users/ok790/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi
+8a.pfb><C:/Users/ok790/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr
+8a.pfb><C:/Users/ok790/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr
+i8a.pfb>
+Output written on report.pdf (5 pages, 218093 bytes).
 PDF statistics:
- 217 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
- 167 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 258 PDF objects out of 1000 (max. 8388607)
+ 55 named destinations out of 1000 (max. 500000)
+ 165 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,15 +2,16 @@
 =============================================================================
 INDUSTRIAL COMPLIANCE MONITORING - DATA DOWNLOAD SCRIPT
 =============================================================================
-Downloads Sentinel-2 L2A imagery + industrial boundary polygons for the
-ML course project (Statement 3).
+Downloads Sentinel-2 L2A imagery for industrial zones delineated by KGIS
+(Karnataka Geographic Information System) taluk boundaries.
 
-What this downloads:
-  - Sentinel-2 bands (B02, B03, B04, B08, B11, B12, SCL) for Peenya
-    Industrial Area, Bengaluru - two time periods (2020 baseline, 2024 recent)
-  - Industrial boundary polygon from OpenStreetMap Overpass API
+Data sources:
+  - KGIS Taluk Shapefiles (https://kgis.ksrsac.in) for study area boundaries
+  - Sentinel-2 L2A via STAC API for multispectral satellite imagery
 
-Total download size: ~300-500 MB
+Study zones:
+  - Bangalore-North Taluk (KGIS code 2001) → Peenya Industrial Area
+  - Bangalore-East Taluk (KGIS code 2004) → Whitefield Industrial Area
 
 Usage:
   pip install -r requirements.txt
@@ -33,11 +34,17 @@ warnings.filterwarnings("ignore")
 
 # -- Configuration ----------------------------------------------------------
 
-# Peenya Industrial Area, Bengaluru - bounding box [west, south, east, north]
+# Study area bounding boxes derived from KGIS Taluk boundaries
+# Bangalore-North (code 2001): 77.370–77.659 E, 12.930–13.167 N
+# We clip to the Peenya industrial pocket within this taluk:
 PEENYA_BBOX = [77.48, 13.01, 77.56, 13.07]
 
-# Additional zone: Whitefield / ITPL area (has visible construction growth)
+# Bangalore-East (code 2004): 77.599–77.784 E, 12.874–13.116 N
+# We clip to the Whitefield/ITPL industrial pocket within this taluk:
 WHITEFIELD_BBOX = [77.72, 12.95, 77.80, 13.01]
+
+# KGIS data paths
+KGIS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "kgis")
 
 # Time periods
 T1_START = "2020-01-01"
@@ -63,45 +70,67 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 RAW_DIR = os.path.join(BASE_DIR, "data", "raw")
 BOUNDARY_DIR = os.path.join(BASE_DIR, "data", "boundaries")
 
-# -- Step 1: Download Industrial Boundaries from OSM ------------------------
+# -- Step 1: Load KGIS Boundaries -------------------------------------------
 
-def download_osm_boundaries():
-    """Download industrial area boundaries from OpenStreetMap Overpass API."""
+def load_kgis_boundaries():
+    """Load industrial zone boundaries from KGIS taluk shapefiles."""
     print("\n" + "=" * 60)
-    print("STEP 1: Downloading Industrial Boundaries from OSM")
+    print("STEP 1: Loading KGIS Taluk Boundaries")
     print("=" * 60)
 
-    overpass_url = "https://overpass-api.de/api/interpreter"
-
-    # Queries using bbox-only (no area filter = simpler, more reliable)
-    queries = {
-        "peenya": '[out:json][timeout:60];(way["landuse"="industrial"](13.01,77.48,13.07,77.56);relation["landuse"="industrial"](13.01,77.48,13.07,77.56););out geom;',
-        "whitefield": '[out:json][timeout:60];(way["landuse"="industrial"](12.95,77.72,13.01,77.80);relation["landuse"="industrial"](12.95,77.72,13.01,77.80););out geom;',
-    }
-
-    for name, query in queries.items():
-        print(f"\n  Querying OSM for {name} industrial boundaries...")
-        try:
-            # Use POST to avoid URL-too-long errors
-            response = requests.post(overpass_url, data={"data": query}, timeout=120)
-            response.raise_for_status()
-            osm_data = response.json()
-
-            # Convert OSM response to GeoJSON
-            geojson = osm_to_geojson(osm_data)
-            n_features = len(geojson["features"])
-            print(f"  [OK] Found {n_features} industrial polygons for {name}")
-
-            # Save GeoJSON
-            output_path = os.path.join(BOUNDARY_DIR, f"{name}_industrial.geojson")
-            with open(output_path, "w") as f:
-                json.dump(geojson, f, indent=2)
-            print(f"  [OK] Saved to {output_path}")
-
-        except Exception as e:
-            print(f"  [FAIL] Error downloading {name}: {e}")
-            print(f"  --> Creating fallback boundary from bounding box...")
+    try:
+        import geopandas as gpd
+    except ImportError:
+        print("  [WARN] geopandas not available, using fallback boundaries")
+        for name in ["peenya", "whitefield"]:
             create_fallback_boundary(name)
+        return
+
+    taluk_path = os.path.join(KGIS_DIR, "taluk", "Taluk.shp")
+    if not os.path.exists(taluk_path):
+        print(f"  [WARN] KGIS Taluk shapefile not found at {taluk_path}")
+        print("  Downloading KGIS Taluk boundaries...")
+        _download_kgis_shapefiles()
+
+    if os.path.exists(taluk_path):
+        gdf = gpd.read_file(taluk_path).to_crs(epsg=4326)
+
+        # KGIS Taluk codes: 2001 = Bangalore-North, 2004 = Bangalore-East
+        kgis_zones = {
+            "peenya": {"taluk_code": "2001", "taluk_name": "Bangalore-North"},
+            "whitefield": {"taluk_code": "2004", "taluk_name": "Bangalore-East"},
+        }
+
+        for zone_name, info in kgis_zones.items():
+            taluk = gdf[gdf["KGISTalukC"] == info["taluk_code"]]
+            if len(taluk) > 0:
+                output_path = os.path.join(BOUNDARY_DIR, f"{zone_name}_kgis_taluk.geojson")
+                taluk.to_file(output_path, driver="GeoJSON")
+                bounds = taluk.total_bounds
+                print(f"  [OK] {info['taluk_name']} (KGIS {info['taluk_code']}): "
+                      f"[{bounds[0]:.3f}, {bounds[1]:.3f}, {bounds[2]:.3f}, {bounds[3]:.3f}]")
+            else:
+                print(f"  [WARN] Taluk {info['taluk_code']} not found in KGIS data")
+                create_fallback_boundary(zone_name)
+    else:
+        print("  [WARN] KGIS download failed, using fallback boundaries")
+        for name in ["peenya", "whitefield"]:
+            create_fallback_boundary(name)
+
+
+def _download_kgis_shapefiles():
+    """Download KGIS Taluk shapefiles from the K-GIS portal."""
+    import zipfile, io
+    url = "https://kgis.ksrsac.in/kgisdocuments/PDF_KML_SHP/Taluk/Shapefiles/Taluk.zip"
+    try:
+        r = requests.get(url, verify=False, timeout=60)
+        if r.status_code == 200:
+            os.makedirs(os.path.join(KGIS_DIR, "taluk"), exist_ok=True)
+            with zipfile.ZipFile(io.BytesIO(r.content)) as z:
+                z.extractall(os.path.join(KGIS_DIR, "taluk"))
+            print(f"  [OK] Downloaded KGIS Taluk shapefiles ({len(r.content)} bytes)")
+    except Exception as e:
+        print(f"  [FAIL] KGIS download error: {e}")
 
     # Also create a combined AOI boundary for each zone
     for name, bbox in [("peenya", PEENYA_BBOX), ("whitefield", WHITEFIELD_BBOX)]:
