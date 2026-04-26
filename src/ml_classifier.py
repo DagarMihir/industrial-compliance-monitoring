@@ -321,6 +321,9 @@ def extract_violation_coordinates(base_dir, zone):
     # Sort by area descending
     violations.sort(key=lambda v: v["area_sqm"], reverse=True)
 
+    # Enrich violations with KGIS administrative metadata
+    _enrich_with_kgis(violations)
+
     # Save
     out_path = os.path.join(processed, zone, "change_detection", "violations.json")
     with open(out_path, "w") as f:
@@ -328,9 +331,44 @@ def extract_violation_coordinates(base_dir, zone):
 
     print(f"  {zone}: Found {len(violations)} violation zones")
     for v in violations[:5]:
-        print(f"    [{v['type']}] ({v['lat']}, {v['lon']}) - {v['area_hectares']} ha")
+        kgis_info = f" [{v.get('kgis_ward', '?')}]" if 'kgis_ward' in v else ""
+        print(f"    [{v['type']}] ({v['lat']}, {v['lon']}) - {v['area_hectares']} ha{kgis_info}")
 
     return violations
+
+
+def _enrich_with_kgis(violations, max_queries=10):
+    """
+    Query KGIS Location Details API to get administrative hierarchy
+    (ward, zone, town, district) for each violation coordinate.
+    Only queries the top violations to avoid hammering the API.
+    """
+    import requests
+    api_url = "https://kgis.ksrsac.in:9000/genericwebservices/ws/getlocationdetails"
+
+    enriched = 0
+    for v in violations[:max_queries]:
+        try:
+            r = requests.get(
+                api_url,
+                params={"coordinates": f"{v['lat']},{v['lon']}", "type": "dd"},
+                verify=False, timeout=5
+            )
+            if r.status_code == 200:
+                data = r.json()
+                if data and isinstance(data, list) and len(data) > 0:
+                    info = data[0]
+                    v["kgis_type"] = info.get("type", "")
+                    v["kgis_district"] = info.get("districtName", "")
+                    v["kgis_ward"] = info.get("wardName", "")
+                    v["kgis_zone"] = info.get("zoneName", "")
+                    v["kgis_town"] = info.get("townName", "")
+                    enriched += 1
+        except Exception:
+            pass  # API may be slow/down, don't block pipeline
+
+    if enriched > 0:
+        print(f"  KGIS API: enriched {enriched}/{min(len(violations), max_queries)} violations with ward data")
 
 
 def run_ml_pipeline(base_dir):

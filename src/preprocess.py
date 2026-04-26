@@ -1,13 +1,16 @@
 """
-Preprocessing module: Cloud masking, band stacking, resampling.
-Reads raw Sentinel-2 bands and produces analysis-ready stacked GeoTIFFs.
+Preprocessing module: Cloud masking, KGIS boundary masking, band stacking, resampling.
+Reads raw Sentinel-2 bands, clips to KGIS taluk boundaries, and produces
+analysis-ready stacked GeoTIFFs.
 """
 
 import os
+import json
 import numpy as np
 import rasterio
 from rasterio.enums import Resampling
 from rasterio.warp import reproject, calculate_default_transform
+from rasterio.features import rasterize
 
 
 def load_band(band_path):
@@ -71,7 +74,49 @@ def resample_to_10m(data_20m, profile_20m, target_shape, target_transform):
     return resampled.astype(np.float32)
 
 
-def stack_bands(raw_dir, output_path):
+def create_kgis_mask(kgis_geojson_path, ref_transform, ref_shape, ref_crs):
+    """
+    Create a binary mask from KGIS taluk boundary GeoJSON.
+    Pixels inside the taluk polygon = 1, outside = 0.
+    """
+    if not os.path.exists(kgis_geojson_path):
+        print(f"    [WARN] KGIS boundary not found: {kgis_geojson_path}")
+        return np.ones(ref_shape, dtype=np.uint8)
+
+    try:
+        with open(kgis_geojson_path, 'r') as f:
+            geojson = json.load(f)
+
+        # Extract geometry from GeoJSON features
+        geometries = []
+        for feature in geojson.get('features', []):
+            geom = feature.get('geometry')
+            if geom:
+                geometries.append(geom)
+
+        if not geometries:
+            print("    [WARN] No geometries in KGIS boundary, using full extent")
+            return np.ones(ref_shape, dtype=np.uint8)
+
+        # Rasterize the KGIS polygon onto the satellite raster grid
+        mask = rasterize(
+            [(geom, 1) for geom in geometries],
+            out_shape=ref_shape,
+            transform=ref_transform,
+            fill=0,
+            dtype=np.uint8,
+        )
+
+        inside_pct = (mask.sum() / mask.size) * 100
+        print(f"    KGIS taluk mask: {inside_pct:.1f}% of raster inside boundary")
+        return mask
+
+    except Exception as e:
+        print(f"    [WARN] KGIS mask error: {e}, using full extent")
+        return np.ones(ref_shape, dtype=np.uint8)
+
+
+def stack_bands(raw_dir, output_path, kgis_geojson_path=None):
     """
     Stack all bands into a single multi-band GeoTIFF.
     Resamples 20m bands to 10m.
@@ -115,9 +160,22 @@ def stack_bands(raw_dir, output_path):
             cloud_mask.astype(np.float32), None, target_shape, ref_transform
         )
         cloud_mask = (cloud_mask > 0.5).astype(np.float32)
-        stacked.append(cloud_mask)
         valid_pct = (cloud_mask.sum() / cloud_mask.size) * 100
         print(f"    Cloud mask: {valid_pct:.1f}% valid pixels")
+    else:
+        cloud_mask = np.ones(target_shape, dtype=np.float32)
+
+    # Apply KGIS taluk boundary mask
+    if kgis_geojson_path:
+        kgis_mask = create_kgis_mask(
+            kgis_geojson_path, ref_transform, target_shape, ref_crs
+        )
+        # Combine: pixel must be cloud-free AND inside KGIS boundary
+        cloud_mask = cloud_mask * kgis_mask.astype(np.float32)
+        combined_pct = (cloud_mask.sum() / cloud_mask.size) * 100
+        print(f"    Combined mask (cloud + KGIS): {combined_pct:.1f}% valid pixels")
+
+    stacked.append(cloud_mask)
     
     # Stack into array: (n_bands, height, width)
     stacked_array = np.array(stacked, dtype=np.float32)
@@ -150,13 +208,27 @@ def preprocess_all(base_dir):
     """Run preprocessing for all zones and time periods."""
     raw_base = os.path.join(base_dir, "data", "raw")
     processed_base = os.path.join(base_dir, "data", "processed")
-    
+    kgis_boundary_dir = os.path.join(base_dir, "data", "kgis", "boundaries")
+
+    # KGIS taluk boundary files for each zone
+    kgis_paths = {
+        "peenya": os.path.join(kgis_boundary_dir, "bangalore_north_taluk.geojson"),
+        "whitefield": os.path.join(kgis_boundary_dir, "bangalore_east_taluk.geojson"),
+    }
+
     zones = ["peenya", "whitefield"]
     periods = ["T1_2020", "T2_2024"]
     
     results = {}
     
     for zone in zones:
+        kgis_path = kgis_paths.get(zone)
+        if kgis_path and os.path.exists(kgis_path):
+            print(f"\n  KGIS boundary: {os.path.basename(kgis_path)}")
+        else:
+            print(f"\n  [WARN] No KGIS boundary for {zone}")
+            kgis_path = None
+
         for period in periods:
             raw_dir = os.path.join(raw_base, zone, period)
             if not os.path.exists(raw_dir):
@@ -167,7 +239,7 @@ def preprocess_all(base_dir):
             output_path = os.path.join(processed_base, zone, f"{period}_stacked.tif")
             
             try:
-                stacked, profile = stack_bands(raw_dir, output_path)
+                stacked, profile = stack_bands(raw_dir, output_path, kgis_path)
                 results[f"{zone}/{period}"] = {
                     "path": output_path,
                     "shape": stacked.shape,
