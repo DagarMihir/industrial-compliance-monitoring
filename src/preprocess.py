@@ -78,21 +78,23 @@ def create_kgis_mask(kgis_geojson_path, ref_transform, ref_shape, ref_crs):
     """
     Create a binary mask from KGIS taluk boundary GeoJSON.
     Pixels inside the taluk polygon = 1, outside = 0.
+    Reprojects from WGS84 to raster CRS (UTM) before rasterizing.
     """
     if not os.path.exists(kgis_geojson_path):
         print(f"    [WARN] KGIS boundary not found: {kgis_geojson_path}")
         return np.ones(ref_shape, dtype=np.uint8)
 
     try:
-        with open(kgis_geojson_path, 'r') as f:
-            geojson = json.load(f)
+        import geopandas as gpd
 
-        # Extract geometry from GeoJSON features
-        geometries = []
-        for feature in geojson.get('features', []):
-            geom = feature.get('geometry')
-            if geom:
-                geometries.append(geom)
+        # Load GeoJSON and reproject to raster CRS
+        gdf = gpd.read_file(kgis_geojson_path)
+        if gdf.crs and str(gdf.crs) != str(ref_crs):
+            gdf = gdf.to_crs(ref_crs)
+            print(f"    KGIS boundary reprojected to {ref_crs}")
+
+        # Extract reprojected geometries
+        geometries = [geom for geom in gdf.geometry if geom is not None]
 
         if not geometries:
             print("    [WARN] No geometries in KGIS boundary, using full extent")

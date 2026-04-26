@@ -1,11 +1,11 @@
 {
-  "total_valid_pixels": 579048,
-  "green_cover_t1_pct": 55.71,
-  "green_cover_t2_pct": 33.15,
-  "green_cover_change_pct": -22.56,
-  "vegetation_loss_pixels": 171388,
-  "vegetation_loss_pct": 29.6,
-  "new_construction_pixels": 26553,
-  "new_construction_pct": 4.59,
+  "total_valid_pixels": 463395,
+  "green_cover_t1_pct": 52.57,
+  "green_cover_t2_pct": 28.51,
+  "green_cover_change_pct": -24.06,
+  "vegetation_loss_pixels": 126181,
+  "vegetation_loss_pct": 27.23,
+  "new_construction_pixels": 21112,
+  "new_construction_pct": 4.56,
   "risk_level": "MEDIUM"
 }
