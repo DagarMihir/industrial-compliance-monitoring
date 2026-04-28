@@ -1,5 +1,7 @@
 # Industrial Environmental Compliance Monitoring System
 
+> 🚀 **[LIVE DEPLOYMENT: INTERACTIVE DASHBOARD & COMPLIANCE REPORTS](https://light-oishikk.github.io/industrial-compliance-monitoring/)** 🚀
+
 **ML Course Project — Statement 3 | IIIT Dharwad**
 
 An automated pipeline for detecting green cover loss and unauthorized construction in industrial zones using multi-temporal Sentinel-2 satellite imagery, spectral analysis, and machine learning.
