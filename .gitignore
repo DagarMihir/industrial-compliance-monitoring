@@ -48,7 +48,4 @@ desktop.ini
 # Generated result images are kept (needed by dashboard)
 # results/ — tracked
 
-# Generated PPT helper scripts (not needed for project to work)
-add_slides.py
-generate_ppt.py
 
