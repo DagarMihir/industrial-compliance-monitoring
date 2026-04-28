@@ -205,10 +205,10 @@ app.py                      ← Step 5: Flask dashboard server
 
 ## Team
 
-- Oishik Kar (23bcs080)
-- Mihir Dagar (23bcs089)
+- Oishik Kar (23bcs089)
+- Mihir Dagar (23bcs080)
 - Shouvik Das (23bcs125)
-- Youvansh Chauhan (23bcs139)
+- Yuvansh Chauhan (23bcs139)
 
 Under the guidance of **Dr. Sunil C K**, Assistant Professor, Department of CSE, IIIT Dharwad
 
