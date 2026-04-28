@@ -102,6 +102,7 @@ def build():
 
     # Make all image paths relative (remove leading /)
     html = html.replace("src: `/img/", "src: `img/")
+    html = html.replace("src = `/img/", "src = `img/")
 
     # Fix report paths: /report/${name} -> report/${name}.html
     html = html.replace("report: `/report/${name}`", "report: `report/${name}.html`")
