@@ -302,20 +302,20 @@ function renderML(z) {
 
   // Images
   const name = z.name;
-  document.getElementById("imgCM").src = `/img/results/confusion_matrix_${name}.png`;
-  document.getElementById("imgLC").src = `/img/results/learning_curve_${name}.png`;
+  document.getElementById("imgCM").src = `img/results/confusion_matrix_${name}.png`;
+  document.getElementById("imgLC").src = `img/results/learning_curve_${name}.png`;
 }
 
 function renderImages(z) {
   const name = z.name;
   const images = [
-    {id: "ba", label: "Before / After", src: `/img/results/before_after_${name}.png`},
-    {id: "av", label: "Violation Map", src: `/img/results/annotated_violations_${name}.png`},
-    {id: "lc", label: "Land Cover", src: `/img/results/landcover_comparison_${name}.png`},
-    {id: "cm", label: "Change Detection", src: `/img/frontend/assets/${name}/change_map.png`},
-    {id: "n1", label: "NDVI 2020", src: `/img/frontend/assets/${name}/ndvi_T1_2020.png`},
-    {id: "n2", label: "NDVI 2024", src: `/img/frontend/assets/${name}/ndvi_T2_2024.png`},
-    {id: "db", label: "Dashboard", src: `/img/frontend/assets/${name}/dashboard.png`},
+    {id: "ba", label: "Before / After", src: `img/results/before_after_${name}.png`},
+    {id: "av", label: "Violation Map", src: `img/results/annotated_violations_${name}.png`},
+    {id: "lc", label: "Land Cover", src: `img/results/landcover_comparison_${name}.png`},
+    {id: "cm", label: "Change Detection", src: `img/frontend/assets/${name}/change_map.png`},
+    {id: "n1", label: "NDVI 2020", src: `img/frontend/assets/${name}/ndvi_T1_2020.png`},
+    {id: "n2", label: "NDVI 2024", src: `img/frontend/assets/${name}/ndvi_T2_2024.png`},
+    {id: "db", label: "Dashboard", src: `img/frontend/assets/${name}/dashboard.png`},
   ];
 
   const tabs = document.getElementById("imgTabs");
