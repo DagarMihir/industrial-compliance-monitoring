@@ -18,7 +18,7 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--t
 a{color:var(--accent);text-decoration:none}
 
 /* Header */
-.header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:1000}
 .header h1{font-size:16px;font-weight:600;letter-spacing:-0.3px}
 .header h1 span{color:var(--muted);font-weight:400;margin-left:8px;font-size:13px}
 .header-meta{font-size:12px;color:var(--muted)}
@@ -52,7 +52,7 @@ a{color:var(--accent);text-decoration:none}
 @media(max-width:900px){.two-col{grid-template-columns:1fr}}
 
 /* Map */
-#map{height:400px;border-radius:var(--radius);border:1px solid var(--border);overflow:hidden}
+#map{height:400px;border-radius:var(--radius);border:1px solid var(--border);overflow:hidden;position:relative;z-index:1}
 
 /* Tables */
 table{width:100%;border-collapse:collapse;font-size:13px}
@@ -63,11 +63,12 @@ tr:hover td{background:#f9fafb}
 .badge-red{background:#fef2f2;color:var(--red)}
 .badge-amber{background:#fffbeb;color:var(--amber)}
 .badge-green{background:#f0fdf4;color:var(--green)}
+.badge-purple{background:#f5f3ff;color:#7c3aed}
 
 /* Image panels */
 .img-panel{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
 .img-panel .panel-title{padding:10px 16px;font-size:12px;font-weight:600;border-bottom:1px solid var(--border);background:#f9fafb;text-transform:uppercase;letter-spacing:0.3px;color:var(--muted)}
-.img-panel img{width:100%;display:block}
+.img-panel img{width:100%;display:block;max-height:800px;object-fit:contain}
 
 /* Image tabs */
 .img-tabs{display:flex;gap:4px;padding:8px 12px;background:#f9fafb;border-bottom:1px solid var(--border);flex-wrap:wrap}
@@ -165,10 +166,7 @@ tr:hover td{background:#f9fafb}
   </div>
 </div>
 
-<div class="footer">
-  Industrial Environmental Compliance Monitoring System &middot; ML Course Project (Statement 3) &middot; IIIT Dharwad<br>
-  Data: KGIS (KSRSAC) Taluk Boundaries + ESA Copernicus Sentinel-2 L2A
-</div>
+
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -261,7 +259,7 @@ function renderViolations(z) {
   const tbody = document.querySelector("#violationsTable tbody");
   tbody.innerHTML = z.violations.slice(0, 20).map((v, i) => {
     const cls = v.type === "vegetation_loss" ? "badge-red" :
-                v.type === "new_construction" ? "badge-amber" : "badge-green";
+                v.type === "new_construction" ? "badge-amber" : "badge-purple";
     return `<tr>
       <td>${i + 1}</td>
       <td style="font-family:'JetBrains Mono',monospace;font-size:12px">${v.lat.toFixed(4)}, ${v.lon.toFixed(4)}</td>
